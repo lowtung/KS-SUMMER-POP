@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link href="Assets/Images/icon.png" rel="icon">
+
+  <title>Kate Spade Summer Game MY</title>
+
+</head>
+
+
+<body>
+  <!-- desktop -->
+  <div id="desktop">
+    <div class="background">
+      <div style="padding: 0;">
+        <div class="contentcontainer" style="text-align: center;">
+          <div>
+            <img width="200px" src="Assets/Images/logo.png" alt="" style="padding: 50px 0 35px;">
+          </div>
+
+          <div>
+            <h style="font-size: 18px; font-family: AustinBold;">Ops.. we detected you are on desktop,</h>
+            <br>
+            <h style="font-size: 18px; font-family: AustinBold;">please scan QR code to experience on
+              mobile.</h>
+          </div>
+
+          <!-- remember to update the qr code to the domain -->
+          <div>
+            <img width="220px" src="Assets/Images/QRcode.png" alt="" style="padding: 60px 20px 0;">
+          </div>
+
+          <div id="footer" style="text-align: center; width: 100%; padding-bottom: 20px;">
+            <p style="font-family: AustinLight; font-size: 14px; margin-bottom: 5px; color: #010101; bottom:0%">
+              © 2021 by kate spade |
+              Powered by <a href="https://www.conten.tech/"
+                style="text-decoration: underline; color:#010101">Conten.T</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ------- -->
+
+  <div id="mobile">
+    <div class="box-background">
+      <div>
+        <img style="height: 50%; width: 50%; margin-top: -5px;" class="center" src="Assets/Images/logo.png">
+      </div>
+      <div>
+        <img style="width: 30%; margin-top: -5px" class="center" src="Assets/Images/1.png">
+      </div>
+      <p
+        style="margin-top: 5px; margin-bottom: 0px; color: #0a6e38; font-size: 10vw; text-decoration: none; font-family: AustinBold; text-align: center;">
+        $10</p>
+      <p
+        style="margin-top: 5px; margin-bottom: 5px; line-height: 1.2; font-size: 5vw; text-decoration: none; font-family: AustinLight; text-align: center;">
+        please enter your name and email<br>address to redeem.</p>
+
+
+      <!-- <div>
+        <p style="font-family: AustinLight; font-size: 3.5vw; color: #010101; text-align: center;">
+          By clicking 'ENTER', I have agreed <br> to the
+          <a target="_blank" onclick="TnC()"
+            style="font-family: AustinLight; text-decoration: underline; font-size: 3.5vw; padding:0px  underline; color: #010101">
+            Privacy policy.</a>
+        </p>
+      </div> -->
+
+    </div>
+
+    <form class="center" id="form" style="z-index: 1; margin-top: 90%;">
+      <div class="form-group">
+        <input type="text" class="form" id="name" placeholder="Name" name="name"
+          style="margin-bottom: -10px; text-align: center;" required>
+      </div>
+
+      <div class="form-group">
+        <input type="email" class="form" id="email" placeholder="Email Address " name="email"
+          style="margin-bottom: 5px; text-align: center;" required>
+      </div>
+
+      <div style="margin-top: 5px; margin-bottom: 5px; color: #010101; text-align: center;">
+        <a href="share.html"
+          style="margin-top: 10px; font-family: AustinLight; font-size: 3.5vw; color:#010101; text-decoration: underline ; ">
+          Thanks, I am not interested.</a>
+      </div>
+
+      <div style="margin-top: 5%; ">
+        <a href="share.html">
+          <button id="submit" class="btn">REDEEM</button></a>
+      </div>
+
+      <div style="margin-top: 5%; ">
+        <a href="https://anyflip.com/iydq/heqq/">
+          <button style="background-color: #d9dada;" class="btn">BROWSE COLLECTION</button></a>
+      </div>
+
+    </form>
+
+
+    <div id="footer" style="text-align: center; width: 100%; padding-bottom: 20px;">
+      <p style="font-family: AustinLight; font-size: 3vw; margin-bottom: 5px; color: #010101; bottom:0%">
+        © 2021 by kate spade |
+        Powered by <a href="https://www.conten.tech/" style="text-decoration: underline; color:#010101">Conten.T</a>
+      </p>
+    </div>
+
+  </div>
+
+
+  <!-- ------- -->
+
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+
+  <!-- <script>
+    function TnC() {
+      alert(
+        "Receive marketing and promotion communications from brand owner and service provider via email. Allow us to process your personal data (for which we may have to share, disclose and/or transfer your data to brand owners’ affiliated companies and/or third party back end service providers within or outside your country) for the purpose of enhancing your customer experience."
+      );
+    }
+
+  </script> -->
+
+  <!-- database -->
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyDKaAqgt6rOJ6POoakGb5772l8thWIoR-I",
+      authDomain: "kate-spade-summer-my.firebaseapp.com",
+      databaseURL: "https://kate-spade-summer-my-default-rtdb.firebaseio.com",
+      projectId: "kate-spade-summer-my",
+      storageBucket: "kate-spade-summer-my.appspot.com",
+      messagingSenderId: "531955543966",
+      appId: "1:531955543966:web:6ed6f170f96752e6ce308f",
+      measurementId: "G-MSWJ86Z2TY"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script>
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+
+    const database = firebase.database();
+    const rootRef = database.ref('Kate Spade Summer MY');
+
+    var today = new Date();
+    var date = ' ' + today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate() + ' ' + today
+      .getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+    document.getElementById('submit').addEventListener('click', function (e) {
+      e.preventDefault();
+
+      var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      if (email.value.match(mailformat)) { } else {
+        alert("You have entered an invalid email address!");
+      }
+
+      var form = document.getElementById('form');
+
+      for (var i = 0; i < form.elements.length; i++) {
+        if (form.elements[i].value === '' && form.elements[i].hasAttribute('required')) {
+          alert("Kindly fill in all required field!");
+          return false;
+        }
+
+        // if (!form.terms.checked) {
+        //   alert("Please indicate that you accept the Privacy Policy");
+        //   form.terms.focus();
+        //   return false;
+        // }
+      }
+
+      rootRef.child(date + (' ') + name.value).set({
+        emailAddress: email.value
+      })
+
+        .then(function () {
+          console.log("Status saved!");
+          window.location.href = "share.html";
+        })
+        .catch(function (error) {
+          console.log("Got an error: ", error + "!");
+        });
+
+    });
+  </script>
+
+  <script>
+    var d = document.getElementById("desktop");
+    var m = document.getElementById("mobile");
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      console.log("mobile detected");
+      d.style.display = "none";
+      m.style.display = "block";
+    } else {
+      console.log("desktop detected");
+      d.style.display = "block";
+      m.style.display = "none";
+    }
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+
+</body>
+
+</html>

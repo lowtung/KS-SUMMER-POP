@@ -1,0 +1,117 @@
+
+  @font-face {
+    font-family: "AustinBold";
+    src: url("../css/Fonts/Austin\ Roman.otf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "AustinLight";
+    src: url("../css/Fonts/Austin\ Light.otf") format("truetype");
+  }
+  @font-face {
+    font-family: "Futura";
+    src: url("../css/Fonts/Futura.ttf") format("truetype");
+  }
+
+
+
+  * {
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-family: "AustinBold";
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  html {
+    min-height: 80vh;
+    font-family: "AustinBold";
+  }
+
+  body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    width: 100%;
+
+  }
+
+  .box-background {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-right: -20%;
+    transform: translate(-50%, -20%) ;
+    display: block;
+    min-height: 20vh;
+    width: 80%;
+    height:70%;
+    background: #ffffff;
+    border-color: #0a6e38;
+    border-style: solid;
+    border-width: 10px;
+    z-index: -1;
+  }
+
+  .btn {
+    margin: auto;
+    background-color: #f6d60d;
+    height: 60px;
+    width: 50%;
+    padding-top: 10px;
+    border-radius: 30px;
+    font-size: 3.5vw;
+    font-family: Futura;
+    letter-spacing: 3px;
+    color: 010101;
+    text-decoration: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+    margin: auto;
+    display: block;
+
+  }
+
+  #footer {
+    background-color: transparent;
+    /* flex: 0 0 50px; */
+    margin-top: 10%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1rem;
+  }
+
+  .form {
+    height: 10%;
+    width: 70%;
+    background-color: white;
+    border-style: solid;
+    border-color: #f6d60d;
+    /* border: none; */
+    padding: 2% 3rem;
+    font-size: 4vw;
+    font-family: "Futura";
+    text-align: center;
+    margin: auto;
+    display: block;
+
+  }
+
+  .grid-container {
+    top: 20%;
+    left: 48%;
+    transform: translate(-50%, -20%) ;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    margin: 10%;
+    column-gap: -50%;
+  }
+
+  
